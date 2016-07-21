@@ -12,11 +12,12 @@ I suggest you try it out yourself!
 The first time the program is started, it installs itself on the system (sadly without automatically linking the file extension to itself, see todo-list). That basically means that a directory `%appdata%/brendeer.pie/` is created and the jar copies itself and some other useful files there. So to uninstall the program again, just remove this directory.
 
 ## To-Do
- - Display the FilterSettings and mke the filters adjustable
+ - Display the FilterSettings and make the filters adjustable (currently working on)
+ - automatically link the file extensions to this program
  - work on the plugin api, so that other plugins can be integrated by simply pasting their jars into some dedicated plugins directory
  - make gui look better
  - way more plugins
- - support for image sequences (maybe have a program-global variable and be able to set the image-in-path to `frame_{i}` or something like that)
+ - support for image sequences (maybe have a program-global variable and be able to set the image-in-path to `frame_{{i}}.png` or something like that)
 
 ## Contribution to the project
 Yes! If you have any ideas / see some bugs / would like to see some features, then let me know. This is supposed to be open source, so if you feel like helping out, let nobody stop you!

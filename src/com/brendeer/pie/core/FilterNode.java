@@ -3,6 +3,7 @@ package com.brendeer.pie.core;
 import com.brendeer.pie.filter.Filter;
 import com.brendeer.pie.filter.FilterDataFormat;
 import com.brendeer.pie.gui.EditPanel;
+import com.brendeer.pie.gui.FilterOptionsDisplay;
 import com.brendeer.pie.gui.Util;
 import java.awt.Color;
 import java.awt.Dimension;
@@ -27,6 +28,7 @@ public class FilterNode {
 	private static final Color HOVER_COLOR = new Color(255, 100, 0).darker();
 
 	private Filter filter; //the internal filter object to render things
+	private FilterOptionsDisplay optionsDisplay;
 	private String pluginName; //the plugin name this filter was created from
 	private float posX, posY; //position and size of the filterNode. Position is the center point of the rect
 	private float sizeX, sizeY; //the size of the node. both, pos&size are in the programs inner coordinate system
@@ -52,6 +54,7 @@ public class FilterNode {
 		this.sizeY = sizeY;
 		selected = false;
 		hover = false;
+		optionsDisplay = new FilterOptionsDisplay(filter.getOptions());
 	}
 
 	/**
@@ -74,6 +77,7 @@ public class FilterNode {
 		drawPins(g, new Point(drawPos), drawSize, scale);
 		drawTitle(g, new Point(drawPos), drawSize);
 		drawConnections(g, new Point(drawPos), drawSize, scale, program);
+		optionsDisplay.render(g, drawPos, drawSize, scale);
 	}
 
 	/**

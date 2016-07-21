@@ -280,4 +280,8 @@ public class FilterOption {
 		val = toMyType(in);
 	}
 
+	public FilterOptionType getType() {
+		return type;
+	}
+
 }
