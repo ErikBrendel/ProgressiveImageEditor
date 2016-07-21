@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- this is a basic example xml file -->
+
+<program>
+	<!-- Here comes the list of all filters inside the program -->
+	<filters>
+		<filter>
+			<!-- each filter contains the plugin name, a position (float2D) 
+			and the serialized options-string -->
+			<name>imageio.simpleInput</name>
+			<pos>
+				<x>-300.0</x>
+				<y>0.0</y>
+			</pos>
+			<options>C:/Users/Erik/Desktop/avatar2.png</options>
+		</filter>
+		<filter>
+			<name>default.invertColors</name>
+			<pos>
+				<x>0.0</x>
+				<y>-100.0</y>
+			</pos>
+			<options>true:::true:::true:::false</options>
+		</filter>
+		<filter>
+			<name>imageio.simpleOutput</name>
+			<pos>
+				<x>200.0</x>
+				<y>0.0</y>
+			</pos>
+			<options>C:\Users\Erik\Desktop\avatar2.png</options>
+		</filter>
+	</filters>
+	<!-- now follows the list of pin connections -->
+	<connections>
+		<connection>
+			<!-- each connection consists of exactly two pins -->
+			<pin1>
+				<!-- and each pin is identified by the filter number (the index from the list above) and the pin index on that filter -->
+				<filter>0</filter>
+				<index>0</index>
+			</pin1>
+			<pin2>
+				<!-- the first pin is outgoing, the second is ingoing -->
+				<filter>1</filter>
+				<index>0</index>
+			</pin2>
+		</connection>
+		<connection>
+			<pin1>
+				<filter>1</filter>
+				<index>0</index>
+			</pin1>
+			<pin2>
+				<filter>2</filter>
+				<index>0</index>
+			</pin2>
+		</connection>
+	</connections>
+</program>
