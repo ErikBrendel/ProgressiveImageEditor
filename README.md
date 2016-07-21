@@ -12,6 +12,7 @@ I suggest you try it out yourself!
 The first time the program is started, it installs itself on the system (sadly without automatically linking the file extension to itself, see todo-list). That basically means that a directory `%appdata%/brendeer.pie/` is created and the jar copies itself and some other useful files there. So to uninstall the program again, just remove this directory.
 
 ## To-Do
+ - Display the FilterSettings and mke the filters adjustable
  - work on the plugin api, so that other plugins can be integrated by simply pasting their jars into some dedicated plugins directory
  - make gui look better
  - way more plugins
