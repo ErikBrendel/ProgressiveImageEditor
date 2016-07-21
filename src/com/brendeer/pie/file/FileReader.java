@@ -48,7 +48,7 @@ public class FileReader {
 			List<Filter> filterList = new ArrayList<>();
 
 			Document doc = builder.parse(xml);
-			Node root = doc.getChildNodes().item(0); //<program>
+			Node root = findChildByName(doc, "program"); //<program>
 
 			//load all the filter objects
 			NodeList filters = findChildByName(root, "filters").getChildNodes();
@@ -134,7 +134,7 @@ public class FileReader {
 				return n;
 			}
 		}
-		System.err.println("No child called \"" + childName + "\" in a list of " + childs.getLength() + " items.");
+		System.err.println("No child called \"" + childName + "\" in a list of " + childs.getLength() + " children of node " + parent.getNodeName());
 		return null;
 	}
 }

@@ -28,7 +28,7 @@ public class FilterProgram {
 	}
 
 	public void addNode(FilterNode n) {
-		n.getFilter().setFileContext(origin);
+		n.getFilter().setFileContext(origin.getParentFile());
 		synchronized (nodeLock) {
 			nodes.add(n);
 		}
